@@ -1,0 +1,117 @@
+@use "mixins" as mx;
+@use "variables" as v;
+
+body {
+  main {
+    margin-top: 7vh;
+
+    #back {
+      margin: 40px;
+      top: 15vh;
+    }
+
+    #checkout-container {
+      top: 10vh;
+      height: 80%;
+      margin: 50px 0;
+      width: 100vw;
+      max-width: 100%;
+      text-align: center;
+      @include mx.flex(column, center, center, 100%);
+      flex-wrap: wrap;
+      gap: 2rem;
+      h2 {
+        width: 100%;
+      }
+      #products-display,
+      #payment-display {
+        float: left;
+        @include mx.flex(column, space-evenly, center, 65%);
+        background-color: #f2e9df;
+        margin: 1rem;
+        padding: 2rem;
+        border-radius: 8px;
+      }
+
+      .product {
+        margin: 2rem;
+        padding: 2.5rem;
+        @include mx.flex(row, space-between, center, 80%);
+        gap: 2rem;
+        border-radius: 0.5rem;
+        background-color: white;
+
+        .fa-trash {
+          cursor: pointer;
+        }
+
+        .imageContainer {
+          width: 100px;
+          height: auto;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+      #total-price {
+        @include mx.flex(row, center, center, 60%);
+        flex-wrap: wrap;
+        padding: 20px;
+        float: right;
+        width: 25%;
+        background-color: #f2e9df;
+        border-radius: 8px;
+
+        #total-sum {
+          @include mx.flex(row, space-between, flex-start, 100%);
+          flex-wrap: wrap;
+          border-top: 1px solid black;
+          border-bottom: 2px solid black;
+          margin: 15px;
+        }
+
+        #checkout-btn,
+        #payment-btn {
+          background-color: #edb480;
+          color: white;
+          border: none;
+          border-radius: 2px;
+          width: 250px;
+          height: 35px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    #form {
+      @include mx.flex(column, center, center, 100%);
+      padding: 1rem;
+
+      input {
+        margin-bottom: 0.5rem;
+      }
+      label {
+        margin-top: 0.5rem;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+    }
+    .loader {
+      font-size: 10px;
+      width: 1em;
+      height: 1em;
+      border-radius: 50%;
+      position: relative;
+      text-indent: -9999em;
+      animation: spinner 1.1s infinite ease;
+      transform: translateZ(0);
+    }
+  }
+  #header-container,
+  footer {
+    background-color: v.$header-footer;
+  }
+}

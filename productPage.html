@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produkter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="src/scss/style.scss" />
+    <link rel="stylesheet" href="src/scss/productPage.scss" />
+  </head>
+  <body>
+    <header>
+      <div id="header-container">
+        <div id="categories">
+          <div class="navDropdown">
+            <a class="choices" href="productPage.html?category=women's clothing">Women</a>
+            <a class="choices" href="productPage.html?category=men's clothing">Men</a>
+            <a class="choices" href="productPage.html?category=jewelery">Jewelery</a>
+            <a class="choices" href="productPage.html?category=electronics">Electronics</a>
+          </div>
+        </div>
+        <a href="/index.html"><h1>The Web Shop</h1></a>
+        <div id="cartElement">
+          <span id="cartAmount"></span>
+          <a id="cartIconHolder" href="/checkout.html">
+            <img id="cartIcon" src="src/img/cartIcon.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="mainProducts"></main>
+
+    <footer>
+      <div id="footer-container">
+        <div id="socials">
+          <a href="#" class="socialLinks fa fa-facebook"></a>
+          <a href="#" class="socialLinks fa fa-instagram"></a>
+          <a href="#" class="socialLinks fa fa-twitter"></a>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/ts/mainProductPage.ts"></script>
+  </body>
+</html>
