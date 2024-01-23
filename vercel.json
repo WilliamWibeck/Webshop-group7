@@ -1,8 +1,3 @@
 {
-  "redirects": [
-    {
-      "source": "/checkout",
-      "destination": "/checkout.html"
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
